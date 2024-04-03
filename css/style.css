@@ -430,11 +430,11 @@ footer
         margin-top: 50px;
     }
 
-    /*.populaires-cards {
+    .populaires-cards {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }*/
+    }
 
     .populaires-cards a {
         width: 30%;
@@ -449,7 +449,15 @@ footer
     }
 
 
+
+
+}
 /****************************Amina Media queries******************************/
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+
 
     fieldset
 {
@@ -482,10 +490,9 @@ footer
     flex-direction: column;
     gap:10px;
 }
+ .populaires-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-/******Fin Amina***Media Queris************/
-
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
 }
