@@ -121,34 +121,42 @@ a {
     margin-bottom: 5px;
 }
 
-/******Amina Afrikou   *******/
+/***************Amina Afrikou   *******/
 /*header */
-/* Logo */
+
+body{
+    display:flex;
+    flex-direction: column;
+}
 .logo
-{
-    
+{ 
     width: 61px;
     height: 19px;
-    padding: 30px 50px 30px 50;
-    
-    
+    padding: 30px 50px 30px 50; 
 }
 /* Menu de navigation ******/
-
-
+header
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    max-width:1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
 nav
 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    width: 23%;
 }
-.menu
+ul
 {
-    width: 244px;
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
-    font-size: 16px;  
+    width: 100%;
+    list-style-type:none;
 }
 
 .lien-menu:hover
@@ -158,39 +166,43 @@ border-top: solid 0.1rem var(--main-color);
 
 }
 
-.slogan {
+/*****************Slogan Recherche Filtre **********************/
+.section-slogan-recherche
+{
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
-    margin-bottom: 4px;
+    gap:20px;
+    margin-bottom: 15px;
 }
-
-.slogan-phrase 
+.slogan
+{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+   
+}
+.slogan .text
 {
     margin-top: 0;
-    margin-bottom:30px;
+    margin-bottom: 0;
 }
-/*header p
-{
-    font-size: 16px; 
-}
-*/
-/***Formulaire ******/
 
+
+/*****Formulaire ***************/
 
 form
 {
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 160px;
-    margin-bottom: 50px;
+    gap:15px;
 }
 
-/***** Première ligne  ******************/
+/***** Première ligne  ************/
 .icon-recherche
 {
     color:black;
     font-size: 22px;
-    padding: 10px 0 4px 19px;
 }
 .icon-contenu
 {
@@ -207,35 +219,39 @@ form
 .bouton-recherche
 {
     border-radius: 0 15px 15px 0;
-    background-color: #F2F2F2;
+    background-color: #0065FC;
+    color:white;
     border:none ;
     width: 132px;
 }
-.bouton-recherche:hover
-{
-    background-color: #0065FC;
-    color:white;
-}
+
 label , input, button
 {
-    height: 49px;
     font-size: 16px;
     font: bold;
+    box-sizing: border-box;
+    /*padding: 15px;*/
+    padding: 15px;
    
 }
 fieldset
 {
     display:flex;
     border:none;
-    position: relative;
-    left:-15px; 
+    padding-left: 0;
 }
 
-/***** Deuxième ligne  ******************/
+/***** Deuxième ligne  *************/
 .filtres
 {
-    gap:20px;
+   gap:20px;
 }
+
+.filtres-l
+{
+padding-left: 0;
+}
+
 .filtres button
 {
     display: flex;
@@ -243,18 +259,40 @@ fieldset
     border: #F2F2F2 solid;
     background-color: white;
     gap:10px;
-    padding: 10px 19px 4px 19px;
 }
+
 .filtres button:hover
 {
     background-color: var(--filter-bg-color)
 }
-.filtres label
+
+/******information**************/
+.info
 {
-    padding: 10px 0 4px 0;
+    display:flex;
+    gap:10px;
+    align-items: center;
 }
 
-/******* hebergements   *********/
+.contour-i
+{
+    border:0.1em solid #D9D9D9; /*var(--main-bg-color);*/
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.icon-i
+{
+    font-size: 12px;   
+}
+
+
+/*************************Section hebergements   *************************************/
 
 .hebergements
 {
@@ -265,7 +303,7 @@ fieldset
 }
 .hebergements-cards img {
     width: 100%;
-    height: 136px;
+    height: 114px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -275,24 +313,38 @@ fieldset
     flex-direction: row;
     justify-content: space-between ;
 }
-
+.hebergements-cards
+{
+    width:100%;
+}
+.hebergements-cards a
+{
+    width:32%;
+}
 .hebergements-cards .card
 {
-    width: 200px;
-    height: 208px;
+    height: 190px;
+}
+.hebergements-cards .card-content
+{
+    margin-left: 10px;
+    margin-top: 0;
 }
 
-.hebergements-cards .card-title {
+.hebergements-cards  .card-title
+{
+margin-top: 0;
+margin-bottom: 0;
+}
+.hebergements-cards .card-subtitle
+{
     margin-top: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 0;
+    font-size: 14px;
 }
 
-.hebergements-cards .card-subtitle {
-    margin: 0;
-}
-/******** Section activités ******************/
-
-.main-activites /*section activités***/
+/******************************** Section activités ************************************/
+.main-activites /*section activités*/
 {
     width: 100%;
     max-width: 1440px;
@@ -305,7 +357,6 @@ fieldset
     justify-content: space-between;
     gap:50px;
 }
-
 .activites-cards  /* conteneur de cards */
 {
    width: 100%;
@@ -313,10 +364,13 @@ fieldset
     flex-direction: row;
     justify-content: space-between;
 }
-
+.activites-cards  a
+{
+    width:23%;
+}
 .activites-cards .card
 {
-    width: 270px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -325,12 +379,9 @@ fieldset
 .activites-cards img
 {
     max-width: 100%;
-    height: 400px;
+    height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin-top:0;
-    margin-left: 0;
-    margin-right: 0;
 }
 .activites-cards .card-subtitle
 {
@@ -338,7 +389,7 @@ fieldset
     font-weight: bold;
 }
 
-/*** Footer ***************************/
+/********************************Section Footer *********************************************/
 
 footer
 {
@@ -359,7 +410,7 @@ footer
 }
 
 
-/********Amina *************************************/
+/********************************Fin Amina *************************************/
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -398,23 +449,33 @@ footer
     }
 
 
-/******Amina Media queries*****/
+/****************************Amina Media queries******************************/
 
     fieldset
 {
-    display: flex;
     flex-wrap: wrap;
 }
+
+
 .hebergements-cards
 {
 display:flex;
 flex-direction:column;
+gap:20px;
 }
+
+.hebergements-cards a,.activites-cards a
+{
+    width: 80%;
+}
+
 .activites-cards
 {
 display:flex;
 flex-direction:column;
+gap:20px;
 }
+
 footer
 {
     display: flex;
@@ -422,7 +483,7 @@ footer
     gap:10px;
 }
 }
-/******Amina***Media Queris************/
+/******Fin Amina***Media Queris************/
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
