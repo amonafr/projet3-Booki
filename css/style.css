@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .main-container {
@@ -127,6 +128,7 @@ a {
 body{
     display:flex;
     flex-direction: column;
+    align-items: center;
 }
 .logo
 { 
@@ -139,30 +141,31 @@ header
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     width:100%;
-    max-width:1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
 }
 nav
 {
-    width: 23%;
+    width: 23%;  
 }
-ul
+
+nav ul
 {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     list-style-type:none;
+    padding-left:0;
 }
-
+.lien-menu
+{  
+    padding-top: 15px;  
+}
 .lien-menu:hover
 {
-color:#0065FC;
-border-top: solid 0.1rem var(--main-color);
-
+    color:#0065FC;
+    border-top: solid 0.1rem var(--main-color);
 }
 
 /*****************Slogan Recherche Filtre **********************/
@@ -208,12 +211,15 @@ form
     width: 50px;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
+    text-align: center;
 }
 .input-ville-recherche 
 {
     border:none;
     border-top: #F2F2F2 solid;
     border-bottom: #F2F2F2 solid;
+    font-weight:700;
+    text-align: center;
 }
 .bouton-recherche
 {
@@ -222,6 +228,7 @@ form
     color:white;
     border:none ;
     width: 132px;
+    text-align: center;
 }
 
 label , input, button
@@ -229,9 +236,7 @@ label , input, button
     font-size: 16px;
     font: bold;
     box-sizing: border-box;
-    /*padding: 15px;*/
-    padding: 15px;
-   
+    padding: 15px; 
 }
 fieldset
 {
@@ -240,7 +245,7 @@ fieldset
     padding-left: 0;
 }
 
-/***** Deuxième ligne  *************/
+/***** Deuxième ligne filtres *************/
 .filtres
 {
    gap:20px;
@@ -298,28 +303,31 @@ padding-left: 0;
    display: flex; 
    flex-direction: column;
    justify-content: space-between;
-   gap:30px;
+   gap:25px;
 }
+
 .hebergements-cards img {
     width: 100%;
     height: 114px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-.hebergements-cards
-{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between ;
-}
-.hebergements-cards
-{
-    width:100%;
-}
+
 .hebergements-cards a
 {
-    width:32%;
+    width:100%;
+} 
+
+.hebergements-cards
+{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:24px;
+    width:100%;
 }
+
+/***********************************************/
+
 .hebergements-cards .card
 {
     height: 190px;
@@ -340,6 +348,12 @@ margin-bottom: 0;
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 14px;
+}
+
+.afficher-plus
+{
+    font-size: 18px;
+    font-weight: 700;
 }
 
 /******************************** Section activités ************************************/
@@ -386,6 +400,7 @@ margin-bottom: 0;
 {
     padding-left: 20px;
     font-weight: bold;
+    font-size: 16px;
 }
 
 /********************************Section Footer *********************************************/
@@ -395,11 +410,11 @@ footer
     background-color: var(--main-bg-color);
     margin-top:50px;
     padding-top:10px;
-    padding-left: 10px;
+    padding-left: 20px;
     display:flex;
     flex-direction: row;
     justify-content:left;
-    gap:200px;
+    gap:250px;
    
 }
 .footergroup
@@ -407,7 +422,19 @@ footer
     display:flex;
     flex-direction: column;
 }
-
+footer ul
+{
+    list-style-type:none;
+    padding-left: 0;
+}
+footer ul li
+{
+    margin-bottom: 15px;
+}
+footer h2
+{
+    font-size: 18px;
+}
 
 /********************************Fin Amina *************************************/
 
