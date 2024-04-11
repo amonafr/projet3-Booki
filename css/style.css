@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
 }
 
 .main-container {
@@ -375,10 +376,12 @@ margin-bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap:20px;
 }
 .activites-cards  a
 {
-    width:23%;
+   /* width:23%;*/
+   width: 100%;
 }
 .activites-cards .card
 {
@@ -410,11 +413,8 @@ footer
     margin-top:50px;
     padding-top:10px;
     padding-left: 20px;
-    display:flex;
-    flex-direction: row;
-    justify-content:left;
-    gap:250px;
-   
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
 }
 .footergroup
 {
@@ -456,13 +456,10 @@ footer h2
     }
 
     .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .populaires-cards a {
-        width: 30%;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:20px;
+         
     }
 
     .populaires-cards .card-title {
@@ -485,32 +482,23 @@ footer h2
     flex-wrap: wrap;
 }
 
-
 .hebergements-cards
 {
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-
-.hebergements-cards a,.activites-cards a
-{
-    width: 80%;
+    grid-template-columns: repeat(1, 1fr);;
 }
 
 .activites-cards
 {
-display:flex;
-flex-direction:column;
-gap:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
 footer
 {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
+    grid-template-columns: repeat(1, 1fr)
 }
+
  .populaires-cards {
     display: flex;
     flex-direction: column;
