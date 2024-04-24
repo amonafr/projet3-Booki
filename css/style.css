@@ -353,13 +353,13 @@ padding-left: 0;
 
 .hebergements-cards  .card-title
 {
-margin-top: 5px;
+margin-top: 4px;
 margin-bottom: 0;
 }
 .hebergements-cards .card-subtitle
 {
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top:8px;
+    margin-bottom: 8px;
     font-size: 14px;
 }
 
@@ -414,8 +414,11 @@ margin-bottom: 0;
 .activites-cards .card-subtitle
 {
     padding-left: 19px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
+    margin:0;
 }
 
 /********************************Section Footer *********************************************/
