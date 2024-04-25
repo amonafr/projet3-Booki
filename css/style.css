@@ -124,13 +124,13 @@ a {
 }
 
 /***************Amina Afrikou   *******/
-/*header */
 
 body{
     display:flex;
     flex-direction: column;
     align-items: center;
 }
+/*header */
 .logo
 { 
     width: 61px;
@@ -181,7 +181,6 @@ nav ul li
     display: flex;
     flex-direction: column;
     margin-top: 50px;
-    /*gap:20px;*/
     gap:35px;
     margin-bottom: 15px;
 }
@@ -198,14 +197,12 @@ nav ul li
     margin-bottom: 0;
 }
 
-
 /*****Formulaire ***************/
 
 form
 {
     display:flex;
     flex-direction: column;
-    /*gap:15px;*/
     gap:35px;
 }
 
@@ -393,7 +390,6 @@ margin-bottom: 0;
 }
 .activites-cards  a
 {
-  /* width:23%;*/
    width: 100%;
 }
 .activites-cards .card
